@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="200dp"
+    android:orientation="vertical"
+    tools:context=".Registration">
+
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Имя"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Номер телефона"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/buttonReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/regist"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

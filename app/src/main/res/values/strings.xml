@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My FireBase app</string>
+    <string name="avtoriz">Авторизация</string>
+    <string name="regist">Регистрация</string>
+    <string name="labeapp2">Ешьте круглый год</string>
+    <string name="amount_products">Кол-во</string>
+    <string name="name_of_products">Название</string>
+</resources>

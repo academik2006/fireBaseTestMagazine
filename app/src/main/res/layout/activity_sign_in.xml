@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SignIn">
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:textSize="14sp"
+        android:inputType="phone"
+        android:maxLength="15"
+        android:hint="Номер телефона" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="start"
+        android:ems="10"
+        android:textSize="14sp"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:hint="Пароль" />
+
+    <Button
+        android:id="@+id/buttonEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Войти в кабинет" />
+</LinearLayout>

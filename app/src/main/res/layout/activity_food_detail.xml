@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FoodDetail">
+
+
+    <ImageView
+        android:id="@+id/mainPhoto"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/burger" />
+
+    <TextView
+        android:id="@+id/food_main_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#36858080"
+        android:gravity="center"
+        android:text="Текст какой-то"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:gravity="center"
+        android:text="Текст какой-то"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/food_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#36858080"
+        android:gravity="center"
+        android:text="Текст какой-то"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonAddToCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:onClick="btnAddToCard"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Швырнуть в барсетку" />
+
+    <Button
+        android:id="@+id/buttonGoToCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:textColor="@color/white"
+       android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Перейти в барсетку" />
+
+</LinearLayout>
