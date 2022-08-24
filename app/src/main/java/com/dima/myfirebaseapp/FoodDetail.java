@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.dima.myfirebaseapp.Models.Cart;
 import com.dima.myfirebaseapp.Models.Category;
 import com.dima.myfirebaseapp.Helpers.JsonHelper;
+import com.dima.myfirebaseapp.Models.Food;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,7 +54,6 @@ public class FoodDetail extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table = database.getReference("Category");
-
         table.child(String.valueOf(ID)).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -70,6 +70,22 @@ public class FoodDetail extends AppCompatActivity {
             }
         });
 
+        final DatabaseReference table_food = database.getReference("Food");
+        table_food.child(String.valueOf(ID)).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Food food = snapshot.getValue(Food.class);
+                price.setText(food.getPrice() + " рублей");
+                food_full_name.setText(food.getFull_text());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(FoodDetail.this, "Нет интернета", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
 
     }
@@ -78,7 +94,7 @@ public class FoodDetail extends AppCompatActivity {
         List<Cart> cartList = JsonHelper.importFromJson(this);
         if (cartList==null){
             cartList = new ArrayList<>();
-            cartList.add(new Cart(ID,100));
+            cartList.add(new Cart(ID,1));
         } else {
             boolean isFound = false;
             for (Cart el: cartList) {
